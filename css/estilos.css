@@ -137,7 +137,7 @@ body.open .navbar-overlay {
 }
 .navbar-menu {
     position: fixed;
-    z-index: 4;
+    z-index: 3;
     top: 0;
     left: 0;
     translate: -100% 0;
@@ -738,9 +738,12 @@ footer{
         padding: 10px;
     }
     .conte-nosotros .foto{
-        width: 90%;
+        width: 80%;
         padding: 10px;
         padding-bottom: 30px;
+        margin-right: 20px;
+        align-items: center;
+        justify-content: center;
     }
 }
 /* maquinas ###########################################33 */
