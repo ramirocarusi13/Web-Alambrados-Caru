@@ -14,10 +14,39 @@
 }
 
 .titulo {
-    color: #0f068b;
+    color: #037c09;
     font-size: 30px;
     text-align: center;
-    margin-bottom: 60px;
+        -webkit-text-size-adjust: 100%;
+    --mfn-woo-body-color: #626262;
+    --mfn-woo-heading-color: #21c700;
+    --mfn-woo-themecolor: #21c700;
+    --mfn-woo-bg-themecolor: #21c700;
+    --mfn-woo-border-themecolor: #21c700;
+    text-align: center;
+    box-sizing: inherit;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    margin-bottom: 15px;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    background: url(../img/barritaverde.png) no-repeat bottom center;
+    padding-bottom: 20px;
+}
+
+/* index */
+
+.contenedor-sobre-nosotros {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 /* Header */
@@ -26,17 +55,17 @@ header {
     width: 100%;
     height: 600px;
     background: #080708;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(0, 0%, 0%, 0.459), hsla(300, 1%, 26%, 0.664)), url(../img/maquinatejedora.jpg);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(0, 0%, 0%, 0.459), hsla(0, 0%, 23%, 0.664)), url(../img/maquinatejedora.jpg);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image:linear-gradient(0deg, 
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)), 
+    url(../img/bobinasalambres.jpeg);
+    background-repeat: no-repeat ;
     background-size: cover;
+    background-position: center center;
     background-attachment: fixed;
-    position: relative;
 }
 
-button{
+button {
     border: 0;
     padding: 0;
     font-family: inherit;
@@ -45,7 +74,8 @@ button{
     cursor: pointer;
     text-decoration: none;
 }
-.navbar-menu a{
+
+.navbar-menu a {
     border: 0;
     padding: 0;
     font-family: inherit;
@@ -56,7 +86,8 @@ button{
     padding-left: 1rem;
     padding-right: 1rem;
 }
-.navbar-menu a:hover{
+
+.navbar-menu a:hover {
     color: rgb(253, 255, 253);
     background-color: rgb(0, 97, 0);
     border-radius: 10px;
@@ -77,6 +108,7 @@ button{
     color: #19191c;
     box-sizing: border-box;
 }
+
 @media only screen and (min-width: 600px) {
     .navbar {
         justify-content: space-between;
@@ -84,14 +116,14 @@ button{
     }
 }
 
-.navbar-overlay{
+.navbar-overlay {
     position: fixed;
     z-index: 3;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     visibility: hidden;
     opacity: 0;
     transition: 0.3s;
@@ -103,7 +135,7 @@ body.open .navbar-overlay {
 }
 
 @media only screen and (min-width: 600px) {
-    .navbar-overlay{
+    .navbar-overlay {
         display: none;
     }
 }
@@ -129,12 +161,14 @@ body.open .navbar-overlay {
     margin: 20px;
     font-size: 16px;
 }
-@media only screen and (max-width: 500px){
-    .navbar-title img{
+
+@media only screen and (max-width: 500px) {
+    .navbar-title img {
         height: 50px;
         margin-bottom: 20px;
     }
 }
+
 .navbar-menu {
     position: fixed;
     z-index: 3;
@@ -154,7 +188,7 @@ body.open .navbar-overlay {
 }
 
 
-body.open .navbar-menu{
+body.open .navbar-menu {
     translate: 0 0;
     visibility: visible;
 }
@@ -170,16 +204,17 @@ body.open .navbar-menu{
     }
 }
 
-.navbar-menu > button {
+.navbar-menu>button {
     color: rgb(2, 2, 2);
     background: transparent;
     padding: 0 8px;
 }
-.navbar-menu > button.active {
+
+.navbar-menu>button.active {
     color: inherit;
 }
 
-header .textos-header{
+header .textos-header {
     display: flex;
     height: 430px;
     width: 100%;
@@ -189,18 +224,18 @@ header .textos-header{
     text-align: center;
 }
 
-.textos-header h1{
+.textos-header h1 {
     font-size: 50px;
-    color:#fff;
+    color: #fff;
 }
 
-.textos-header h2{
+.textos-header h2 {
     font-size: 30px;
     font-weight: 300;
-    color:#fff;
+    color: #fff;
 }
 
-.wave{
+.wave {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -208,27 +243,12 @@ header .textos-header{
 
 /* About us */
 
-main .sobre-nosotros{
-    padding: 30px 0 60px 0;
-}
-.contenedor-sobre-nosotros{
-    display: flex;
-    justify-content: space-evenly;
-}
 
-.imagen-about-us{
-    width: 48%;
-}
-
-.sobre-nosotros .contenido-textos{
-    width: 48%;
-}
-
-.contenido-textos h3{
+.contenido-textos h3 {
     margin-bottom: 15px;
 }
 
-.contenido-textos h3 span{
+.contenido-textos h3 span {
     background: rgb(0, 97, 0);
     color: #fff;
     border-radius: 50%;
@@ -241,7 +261,7 @@ main .sobre-nosotros{
     margin-right: 5px;
 }
 
-.contenido-textos p{
+.contenido-textos p {
     padding: 0px 0px 30px 15px;
     font-weight: 300;
     text-align: justify;
@@ -250,17 +270,17 @@ main .sobre-nosotros{
 /* Galeria #######################################*/
 
 
-.portafolio{
+.portafolio {
     background: #f2f2f2;
 }
 
-.galeria-port{
+.galeria-port {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.imagen-port{
+.imagen-port {
     width: 24%;
     margin-bottom: 10px;
     overflow: hidden;
@@ -269,20 +289,20 @@ main .sobre-nosotros{
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
 }
 
-.imagen-port > img{
+.imagen-port>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-.hover-galeria{
+.hover-galeria {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     transform: scale(0);
-    background: hsla(273,91%,27%, 0.7);
+    background: hsla(273, 91%, 27%, 0.7);
     transition: transform .5s;
     display: flex;
     justify-content: center;
@@ -290,97 +310,106 @@ main .sobre-nosotros{
     flex-direction: column;
 }
 
-.hover-galeria img{
+.hover-galeria img {
     width: 50px;
 }
 
-.hover-galeria p{
+.hover-galeria p {
     color: #fff;
 }
 
-.imagen-port:hover .hover-galeria{
+.imagen-port:hover .hover-galeria {
     transform: scale(1);
 }
 
 /* Clients */
 
-.cards{
+.cards {
     display: flex;
     justify-content: space-evenly;
 }
 
-.cards .card{
-    background: #0f068b;
+.cards .card {
+    background: #e9e9e9;
     display: flex;
     width: 46%;
-    height: 200px;
+    height: 400px;
     align-items: center;
     justify-content: space-evenly;
     border-radius: 5px;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
 }
 
-.cards .card img{
-    width: 100px;
-    height: 100px;
+.cards .card img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border: 3px solid #fff;
-    border-radius: 50%;
     display: block;
 }
 
-.cards .card > .contenido-texto-card{
+.cards .card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cards .card>.contenido-texto-card {
     width: 60%;
     color: #fff;
 }
 
-.cards .card > .contenido-texto-card p{
+.cards .card>.contenido-texto-card p {
     font-weight: 300;
     padding-top: 5px;
 }
 
 /*  Our team */
 
-.about-services{
+.about-services {
     background: #f2f2f2;
     padding-bottom: 30px;
 }
 
 
-.servicio-cont{
-    display:flex;
-    justify-content: space-between;
+.servicio-cont {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    padding: 30px;
 }
 
-.servicio-ind{
+.servicio-ind {
     width: 28%;
     text-align: center;
 }
 
-.servicio-ind img{
-    width: 90%;
+.servicio-ind img {
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
 }
 
-.servicio-ind h3{
+.servicio-ind h3 {
     margin: 10px 0;
 }
 
-.servicio-ind p{
+.servicio-ind p {
     font-weight: 300;
     text-align: justify;
 }
 
 /* footer */
 
-footer{
+footer {
     background: #414141;
     padding: 60px 0 30px 0;
     margin: auto;
     overflow: hidden;
 }
 
-.contenedor-footer{
+.contenedor-footer {
     display: flex;
     width: 90%;
     justify-content: space-evenly;
@@ -389,169 +418,172 @@ footer{
     border-bottom: 1px solid #ccc;
 }
 
-.content-foo{
+.content-foo {
     text-align: center;
 }
 
-.content-foo h4{
+.content-foo h4 {
     color: #fff;
     border-bottom: 3px solid #0f068b;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
 
-.content-foo p{
+.content-foo p {
     color: #ccc;
 }
 
-.titulo-final{
+.titulo-final {
     text-align: center;
     font-size: 24px;
     margin: 20px 0 0 0;
     color: #9e9797;
 }
 
-@media screen and (max-width:900px){
-    header{
+@media screen and (max-width:900px) {
+    header {
         background-position: center;
     }
 
-    .contenedor-sobre-nosotros{
+    .contenedor-sobre-nosotros {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .sobre-nosotros .contenido-textos{
+    .sobre-nosotros .contenido-textos {
         width: 90%;
     }
 
-    .imagen-about-us{
+    .imagen-about-us {
         width: 90%;
     }
 
     /* Galeria */
 
-    .imagen-port{
+    .imagen-port {
         width: 44%;
     }
 
     /* Clientes */
 
-    .cards{
+    .cards {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .cards .card{
+    .cards .card {
         width: 90%;
     }
 
-    .cards .card:first-child{
+    .cards .card:first-child {
         margin-bottom: 30px;
     }
 
     /* servicios */
 
-    .servicio-cont{
+    .servicio-cont {
         justify-content: center;
         flex-direction: column;
     }
 
-    .servicio-ind{
+    .servicio-ind {
         width: 100%;
         text-align: center;
     }
 
-    .servicio-ind:nth-child(1), .servicio-ind:nth-child(2){
+    .servicio-ind:nth-child(1),
+    .servicio-ind:nth-child(2) {
         margin-bottom: 60px;
     }
 
-    .servicio-ind img{
+    .servicio-ind img {
         width: 90%;
     }
 }
 
-@media screen and (max-width:500px){
-    nav{
+@media screen and (max-width:500px) {
+    nav {
         text-align: center;
         padding: 30px 0 0 0;
     }
 
-    nav > a{
+    nav>a {
         margin-right: 5px;
     }
 
-    .textos-header h1{
+    .textos-header h1 {
         font-size: 35px;
     }
 
-    .textos-header h2{
+    .textos-header h2 {
         font-size: 20px;
     }
 
     /* ABOUT US */
 
-    .imagen-about-us{
+    .imagen-about-us {
         margin-bottom: 60px;
         width: 99%;
     }
 
-    .sobre-nosotros .contenido-textos{
+    .sobre-nosotros .contenido-textos {
         width: 95%;
     }
 
     /* Galeria */
 
-    .imagen-port{
+    .imagen-port {
         width: 95%;
     }
 
     /* Clients */
 
-    .cards .card{
+    .cards .card {
         height: 450px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .cards .card img{
-        width: 90px;
-        height: 90px;
+    .cards .card img {
+        width: 100%;
+        height: 100%;
     }
+
 
     /* Footer */
 
-    .contenedor-footer{
+    .contenedor-footer {
         flex-direction: column;
         border: none;
     }
 
-    .content-foo{
+    .content-foo {
         margin-bottom: 20px;
         text-align: center;
     }
 
-    .content-foo h4{
+    .content-foo h4 {
         border: none;
     }
 
-    .content-foo p{
+    .content-foo p {
         color: #ccc;
         border-bottom: 1px solid #f2f2f2;
         padding-bottom: 20px;
     }
 
-    .titulo-final{
+    .titulo-final {
         font-size: 20px;
     }
 }
+
 /* form ################################ */
 
 
-.container-form{
+.container-form {
     width: 100%;
     max-width: 90%;
     margin: auto;
@@ -561,19 +593,23 @@ footer{
     flex-direction: row;
     padding: 20px;
 }
-.container-form .form{
+
+.container-form .form {
     padding-left: 120px;
 }
-.container-form h2{
+
+.container-form h2 {
     margin-bottom: 15px;
     font-size: 35px
 }
-.container-form p{
+
+.container-form p {
     font-size: 17px;
     line-height: 1.6;
     margin-bottom: 30px;
 }
-.container-form a{
+
+.container-form a {
     font-size: 16px;
     display: flex;
     text-decoration: none;
@@ -582,12 +618,15 @@ footer{
     color: rgb(255, 255, 255);
     font-weight: 700;
 }
-.container-form a i{
+
+.container-form a i {
     color: rgb(255, 255, 255);
     margin-right: 10px;
-    
+
 }
-.container-form .form .campo, textarea{
+
+.container-form .form .campo,
+textarea {
     width: 100%;
     padding: 15px 10px;
     font-size: 16px;
@@ -596,13 +635,15 @@ footer{
     border-radius: 3px;
     outline: 0px;
 }
-.container-form .form textarea{
+
+.container-form .form textarea {
     max-width: 530px;
     min-width: 430px;
     min-height: 140px;
     max-height: 150px;
 }
-.container-form .btn-enviar{
+
+.container-form .btn-enviar {
     padding: 15px;
     font-size: 16px;
     border: none;
@@ -613,10 +654,12 @@ footer{
     cursor: pointer;
     transition: all 300ms ease;
 }
-.container-form .btn-enviar:hover{
+
+.container-form .btn-enviar:hover {
     background: rgb(0, 97, 0);
 }
-.info-form{
+
+.info-form {
     background-color: rgb(0, 97, 0);
     color: white;
     padding: 60px;
@@ -624,7 +667,8 @@ footer{
     display: flex;
     flex-direction: column;
 }
-.contacto-line{
+
+.contacto-line {
     height: 50px;
     width: 100%;
     color: white;
@@ -634,15 +678,18 @@ footer{
     justify-content: start;
     padding-left: 87px;
 }
-.ubi{
+
+.ubi {
     display: flex;
     flex-direction: row;
 }
-.ubi iframe{
+
+.ubi iframe {
     width: 50%;
 }
-.ubi .cartel{
-    background-image:url(https://img.freepik.com/foto-gratis/textura-metal-rasgunos-polvo-grietas-fondos-texturizados_1421-330.jpg?w=740&t=st=1668201283~exp=1668201883~hmac=14c385ed3d5fc56f33801462473e2e314f3d6216eb4d2eab494b4af81f6028c2);
+
+.ubi .cartel {
+    background-image: url(https://img.freepik.com/foto-gratis/textura-metal-rasgunos-polvo-grietas-fondos-texturizados_1421-330.jpg?w=740&t=st=1668201283~exp=1668201883~hmac=14c385ed3d5fc56f33801462473e2e314f3d6216eb4d2eab494b4af81f6028c2);
     background-size: cover;
     padding: 10px;
     display: flex;
@@ -653,51 +700,62 @@ footer{
     width: 50%;
 
 }
-.ubi .cartel .derechos{
+
+.ubi .cartel .derechos {
     font-size: 10px;
 }
+
 .ubi .cartel .logos {
     display: flex;
     flex-direction: row;
 }
+
 .ubi .cartel .logos a {
     height: 100%;
-    padding:20px;
+    padding: 20px;
     color: black;
 }
-@media only  screen and (max-width:600px){
-    .container-form{
+
+@media only screen and (max-width:600px) {
+    .container-form {
         display: flex;
         flex-direction: column;
     }
-    .container-form .form{
+
+    .container-form .form {
         padding-top: 20px;
         padding-left: 0px;
     }
-    .container-form .form .campo{
+
+    .container-form .form .campo {
         width: 100%;
     }
-    .container-form .form textarea{
+
+    .container-form .form textarea {
         max-width: 430px;
         min-width: 330px;
         min-height: 140px;
         max-height: 150px;
     }
-    .contacto-line{
+
+    .contacto-line {
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 0;
     }
-    .ubi{
+
+    .ubi {
         display: flex;
         flex-direction: column;
 
     }
-    .ubi iframe{
+
+    .ubi iframe {
         width: 100%;
     }
-    .ubi .cartel{
+
+    .ubi .cartel {
         width: 100%;
     }
 
@@ -706,41 +764,120 @@ footer{
 
 /*Nosotros$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4*/
 
-.conte-nosotros{
+.conte-nosotros {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    background-image: url(https://img.freepik.com/foto-gratis/textura-metal-rasgunos-polvo-grietas-fondos-texturizados_1421-330.jpg?w=740&t=st=1668201283~exp=1668201883~hmac=14c385ed3d5fc56f33801462473e2e314f3d6216eb4d2eab494b4af81f6028c2);
+    background-color: whitesmoke;
+    align-items: center;
 }
-.conte-nosotros .descripcion{
-    padding: 20px;
-    padding-top: 40px;
 
+.conte-nosotros .descripcion {
     color: black;
-    width: 50%;
+    padding: 50px;
+    width: 80%;
+    text-align: center;
+    justify-content: center;
 }
-.conte-nosotros .foto{
+
+
+.conte-nosotros .foto {
     padding: 20px;
     padding-top: 40px;
-    padding-left: 120px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: whitesmoke;
+    
 }
-.conte-nosotros .foto:hover{
+.conte-nosotros .foto img{
+    height: 400px;
+    width: 450px;
+    padding-bottom: 30px;
+}
+
+
+.conte-nosotros .foto:hover {
     zoom: normal;
 }
-@media only  screen and (max-width:600px){
-    .conte-nosotros{
+
+.conte-nosotros2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h3 {
+    color: green;
+    padding: 20px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.container {
+    margin: 0 auto;
+    background-color: white;
+}
+
+.conte-nosotros2 {
+    text-align: center;
+}
+
+.videofamiliar video {
+    max-width: 100%;
+}
+
+.img-familiar img {
+    max-width: 90%;
+}
+
+.img-familiar img,
+.videofamiliar video {
+    transition: transform 0.3s ease-in-out;
+    padding-bottom: 20px;
+
+}
+
+.img-familiar:hover img,
+.videofamiliar:hover video {
+    transform: translateY(-10px);
+}
+
+img:hover {
+    transform: rotateY(10deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+.d-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media only screen and (max-width:600px) {
+    .conte-nosotros {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .conte-nosotros .descripcion{
+
+    .conte-nosotros .descripcion {
         flex-direction: row;
         padding: 10px;
     }
-    .conte-nosotros .foto{
-        padding: 0;
-        margin: 0;
+
+    .conte-nosotros .foto {
+        padding: 20px;
+        margin: auto;
         width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
@@ -756,77 +893,90 @@ footer{
     margin: auto;
     padding: 30px;
 }
-.cardmaquinas .card{
+
+.cardmaquinas .card {
     width: 330px;
     height: 430px;
     border-radius: 8px;
-    box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     margin: 20px;
     text-align: center;
     transition: all 0.25s;
 }
-.cardmaquinas .card:hover{
+
+.cardmaquinas .card:hover {
     transform: translateY(-15px);
-    box-shadow: 0px 12px 16px rgba(0,0,0,0.2);
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.2);
 }
-.cardmaquinas .card img{
+
+.cardmaquinas .card img {
     width: 330px;
     height: 220px;
 }
-.cardmaquinas .card h4{
+
+.cardmaquinas .card h4 {
     font-weight: 600;
 }
-.cardmaquinas .card p{
+
+.cardmaquinas .card p {
     padding: 0 1rem;
     font-size: 16px;
     font-weight: 300;
 }
-.cardmaquinas .card a{
+
+.cardmaquinas .card a {
 
     font-weight: bold;
     text-decoration: none;
     color: blue;
     padding: 10px;
 
-    
+
 }
+
 /*:::::Pie de Pagina*/
-.pie-pagina{
+.pie-pagina {
     width: 100%;
-    background-color: #b3b3b3;
+    background-color: #c9c9c9;
 }
-.pie-pagina .grupo-1{
+
+.pie-pagina .grupo-1 {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap:50px;
+    grid-gap: 50px;
     padding: 15px 20px;
 }
-.pie-pagina .grupo-1 .box figure{
+
+.pie-pagina .grupo-1 .box figure {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.pie-pagina .grupo-1 .box figure img{
+
+.pie-pagina .grupo-1 .box figure img {
     width: 250px;
 }
-.pie-pagina .grupo-1 .box h2{
+
+.pie-pagina .grupo-1 .box h2 {
     color: rgb(12, 9, 9);
     margin-bottom: 25px;
     font-size: 20px;
 }
-.pie-pagina .grupo-1 .box p{
+
+.pie-pagina .grupo-1 .box p {
     color: #000000;
     margin-bottom: 10px;
     font-size: 13px;
     font-weight: 500;
 }
-.pie-pagina .grupo-1 .red-social a{
+
+.pie-pagina .grupo-1 .red-social a {
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -838,23 +988,142 @@ footer{
     text-align: center;
     transition: all 300ms ease;
 }
-.pie-pagina .grupo-1 .red-social a:hover{
+
+.pie-pagina .grupo-1 .red-social a:hover {
     color: aqua;
 }
-.pie-pagina .grupo-2{
+
+.pie-pagina .grupo-2 {
     background-color: #0a1a2a;
     padding: 15px 10px;
     text-align: center;
     color: rgb(255, 255, 255);
 }
-.pie-pagina .grupo-2 small{
+
+.pie-pagina .grupo-2 small {
     font-size: 15px;
 }
-@media screen and (max-width:800px){
-    .pie-pagina .grupo-1{
+
+@media screen and (max-width:800px) {
+    .pie-pagina .grupo-1 {
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
+        grid-gap: 30px;
         padding: 35px 0px;
     }
 }
+
+/* productos */
+
+
+.galeria {
+    font-family: 'open sans';
+}
+
+.galeria h1 {
+    text-align: center;
+    margin: 20px 0 15px 0;
+    font-weight: 300;
+}
+
+.linea {
+    border-top: 5px solid #019e09;
+}
+
+.contenedor-imagenes {
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 3px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.contenedor-imagenes .imagen {
+    width: 32%;
+    position: relative;
+    height: 280px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75);
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(22, 192, 0, 0.781);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.overlay h2 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.imagen:hover .overlay {
+    height: 100%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1000px) {
+    .contenedor-imagenes {
+        width: 95%;
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .contenedor-imagenes {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    .contenedor-imagenes .imagen {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .contenedor-imagenes {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    .contenedor-imagenes .imagen {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
