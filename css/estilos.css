@@ -1133,6 +1133,7 @@ img:hover {
     border-radius: 3px;
     padding-bottom: 150px;
     padding-top: 150px;
+    text-align: center;
 }
 .contenedor-imagenes a button{
     display: inline-flex;
@@ -1220,6 +1221,7 @@ img:hover {
     .contenedor-imagenes {
         width: 95%;
         padding-top: 10px;
+        text-align: center;
     }
 }
 
@@ -1229,11 +1231,12 @@ img:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 10px;
+        text-align: center;
     }
 
     .contenedor-imagenes .imagen {
         width: 95%;
+        margin-top: 100px;
     }
 }
 
