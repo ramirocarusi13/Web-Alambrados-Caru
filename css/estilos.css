@@ -351,7 +351,46 @@ header .textos-header {
     height: 100%;
     cursor: pointer;
 }
+@media screen and (max-width:1000px) {
+    .contenedor-imagenes2 {
+        width: 95%;
+        padding-top: 10px;
+        text-align: center;
+    }
+}
 
+@media screen and (max-width:700px) {
+    .contenedor-imagenes2 {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contenedor-imagenes2 .imagen2 {
+        width: 95%;
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .contenedor-imagenes2 {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    .contenedor-imagenes2.imagen2 {
+        width: 90%;
+    }
+}
 
 /* services */
 
